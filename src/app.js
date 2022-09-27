@@ -26,7 +26,10 @@ app.set('views', './src/views'); // Seteo de la ubicación de la carpeta "views"
 const mainRouter = require('./routes/main');
 app.use('/', mainRouter);
 
+//middlewar
 
+const logMiddleware = require('./middlewares/userLogs');
+app.use(logMiddleware);
 
 // ************ DON'T TOUCH FROM HERE ************
 // ************ catch 404 and forward to error handler ************
